@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario del Laboratorio Químico</title>
+</head>
+
+<body bgcolor="lightblue">
+    <h1>Inventario del Laboratorio Químico</h1>
+
+    <h2>Formulario de Registro</h2>
+    <form>
+        <fieldset>
+            <legend>Información del Usuario</legend>
+            <label for="fname">Nombre:</label><br>
+            <input type="text" id="fname" name="fname" required placeholder="Escribe tu nombre"><br>
+
+            <label for="lname">Apellido:</label><br>
+            <input type="text" id="lname" name="lname" required placeholder="Escribe tu apellido"><br>
+
+            <label for="dni">Cédula:</label><br>
+            <input type="number" id="dni" name="dni" required placeholder="Escribe tu cédula con guiones"><br>
+
+            <label for="date">Fecha del Inventario:</label><br>
+            <input type="date" id="date" name="date" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Información del Producto</legend>
+            <label for="nombre">Nombre del Producto:</label><br>
+            <input list="productos" id="nombre" name="nombre" required placeholder="Selecciona el producto">
+            <datalist id="productos">
+                <optgroup label="Sustancias Inorgánicas">
+                    <option Value="Ácido clorhídrico (HCl)">Sustancias Inorgánicas</option>
+                    <option Value="Ácido sulfúrico (H₂SO₄)">Sustancias Inorgánicas</option>
+                    <option Value="Hidróxido de sodio (NaOH)">Sustancias Inorgánicas</option>
+                    <option Value="Nitrato de plata (AgNO₃)">Sustancias Inorgánicas</option>
+                    <option Value="Permanganato de potasio (KMnO₄)">Sustancias Inorgánicas</option>
+                    <option Value="Amoniaco (NH₃)">Sustancias Inorgánicas</option>
+                    <option Value="Etanol (C₂H₅OH)">Sustancias Inorgánicas</option>
+                    <option Value="Cloroformo (CHCl₃)">Sustancias Inorgánicas</option>
+                    <option Value="Acetona (C₃H₆O)">Sustancias Inorgánicas</option>
+                    <option Value="Benceno (C₆H₆)">Sustancias Inorgánicas</option>
+                    <option Value="Ácido acético (CH₃COOH)">Sustancias Inorgánicas</option>
+                    <option Value="Hidróxido de calcio (Ca(OH)₂)">Sustancias Inorgánicas</option>
+                </optgroup>
+                <optgroup label="Sustancias Orgánicas">
+                    <option Value="Glucosa (C₆H₁₂O₆)">Sustancias Orgánicas</option>
+                   <option Value="Ácido cítrico (C₆H₈O₇)">Sustancias Orgánicas</option>
+                   <option Value="Metanol (CH₃OH)">Sustancias Orgánicas</option>
+                    <option Value="Acetato de etilo (C₄H₈O₂)">Sustancias Orgánicas</option>
+                    <option Value="Ácido fórmico (HCOOH)">Sustancias Orgánicas</option>
+                </optgroup>
+                <optgroup label="Gases">
+                   <option Value="Oxígeno (O₂)">Gases</option>
+                    <option Value="Dióxido de carbono (CO₂)">Gases</option>
+                    <option Value="Nitrógeno (N₂)">Gases</option>
+                    <option Value="Hidrógeno (H₂)">Gases</option>
+                    <option Value="Argón (Ar)">Gases</option>
+                    <option Value="Metano (CH₄)">Gases</option>
+                </optgroup>
+                <optgroup label="Materiales de Laboratorio">
+                    <option Value="Pipetas">Materiales de Laboratorio</option>
+                   <option Value="Matraces Erlenmeyer">Materiales de Laboratorio</option>
+                    <option Value="Sondas graduadas">Materiales de Laboratorio</option>
+                    <option Value="Tubos de ensayo">Materiales de Laboratorio</option>
+                    <option Value="Vidrio de reloj">Materiales de Laboratorio</option>
+                    <option Value="Buretas">Materiales de Laboratorio</option>
+                    <option Value="Balances analíticos">Materiales de Laboratorio</option>
+                </optgroup>
+                <optgroup> label="Soluciones y mezclas comunes">
+                   <option Value="Solución salina (NaCl en H2O)">Soluciones y mezclas comunes</option>
+                    <option Value="Solución tampón de fosfato">Soluciones y mezclas comunes</option>
+                    <option Value="Solución de azufre coloidal">Soluciones y mezclas comunes</option>
+              <option Value="Solución DE Hidróxido de Amonio(NH4OH)">Soluciones y mezclas comunes</option>
+                </optgroup>
+                <optgroup label="Limpieza y Seguridad">
+                    <option Value="Alcohol desinfectante (etanol 70%)">Limpieza y Seguridad</option>
+                    <option Value="Solución de hipoclorito de sodio (lejía)">Limpieza y Seguridad</option>
+                    <option Value="Guantes de látex">Limpieza y Seguridad</option>
+                   <option Value="Máscaras de seguridad">Limpieza y Seguridad</option>
+                    <option Value="Gafas de protección">Limpieza y Seguridad</option>
+                </optgroup>
+                <optgroup label="Otros">
+                    <option Value="Agar para cultivo microbiológico">Otros</option>
+                    <option Value="Calcio en polvo (Ca)">Otros</option>
+                   <option Value="Sulfato de cobre (CuSO₄)">Otros</option>
+                    <option Value="Cloruro de sodio (NaCl)">Otros</option>
+                    <option Value="Óxido de zinc (ZnO)">Otros</option>
+                </optgroup>
+            </datalist>
+            <br>
+
+            <label for="categoria">Categoría del Producto:</label><br>
+            <select id="categoria" name="categoria" required>
+                <option value="">Seleccione una categoría</option>
+                <option value="Sustancias Inorgánicas">Sustancias Inorgánicas</option>
+                <option value="Sustancias Orgánicas">Sustancias Orgánicas</option>
+                <option value="Gases">Gases</option>
+                <option value="Materiales de Laboratorio">Materiales de Laboratorio</option>
+                <option value="Soluciones y mezclas comunes">Soluciones y mezclas comunes</option>
+                <option value="Limpieza y Seguridad">Limpieza y Seguridad</option>
+                <option value="Otros">Otros</option>
+            </select>
+            <br><br>
+
+            <fieldset>
+                <legend>Cantidad de Productos</legend>
+                <label for="sustancias_inorganicas">Sustancias Inorgánicas:</label>
+                <input type="number" id="sustancias_inorganicas" name="sustancias_inorganicas" value="0"><br>
+
+                <label for="sustancias_organicas">Sustancias Orgánicas:</label>
+                <input type="number" id="sustancias_organicas" name="sustancias_organicas" value="0"><br>
+
+                <label for="gases">Gases:</label>
+                <input type="number" id="gases" name="gases" value="0"><br>
+
+                <label for="materiales_laboratorio">Materiales de Laboratorio:</label>
+                <input type="number" id="materiales_laboratorio" name="materiales_laboratorio" value="0"><br>
+
+                <label for="soluciones_mezclas">Soluciones y Mezclas Comunes:</label>
+                <input type="number" id="soluciones_mezclas" name="soluciones_mezclas" value="0"><br>
+
+                <label for="limpieza_seguridad">Limpieza y Seguridad:</label>
+                <input type="number" id="limpieza_seguridad" name="limpieza_seguridad" value="0"><br>
+
+                <label for="otros">Otros:</label>
+                <input type="number" id="otros" name="otros" value="0"><br>
+            </fieldset>
+            <br>
+        </fieldset>
+        <h2>Comentarios</h2>
+        <textarea id="comentarios" rows="4" cols="50" placeholder="Escribe aquí cualquier observación..."></textarea>
+        <input type="submit" value="Registrar Producto">
+    </form>
+    
+</body>
+</html>
